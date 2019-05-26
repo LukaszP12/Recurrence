@@ -54,8 +54,36 @@ public class Class {
     }
 
     // Part of recursion exercises
-    
+    public static void strRecur(String s)
+    {
+        if(s.length() < 6)
+        {
+            System.out.println(s);
+            strRecur(s + "*");
+        }
+    }
 
+    public static void printString(String s){
+        if(s.length() > 0)
+        {
+            printString(s.substring(1));
+            System.out.println(s.substring(0,1));
+        }
+    }
+
+    //Example 3
+    public static void doSomething(int n)
+    {
+        if(n > 0 )
+        {
+            doSomething(n - 1);
+            System.out.println(n);
+            doSomething(n - 1);
+        }
+    }
+
+    //Example 4
+    
 
     public static void main(String args[]){
         System.out.println(factorial(5));
@@ -70,6 +98,12 @@ public class Class {
         System.out.println(mystery(3,2,6));
 
         System.out.println(f(6,8));
+
+        strRecur("wyo");
+
+        printString("wyo");
+
+        doSomething(4);
     }
 
 }
